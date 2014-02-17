@@ -388,8 +388,8 @@ bool MetadataExtractor::populateForEachMetadata(
     }
   } else {
     if (mExportForEachSignatureCount != 1) {
-      ALOGE("mExportForEachSignatureCount = %zu, but should be 1",
-            mExportForEachSignatureCount);
+      ALOGE("mExportForEachSignatureCount = %lu, but should be 1",
+            (unsigned long) mExportForEachSignatureCount);
     }
     char *RootName = new char[5];
     strncpy(RootName, "root", 5);

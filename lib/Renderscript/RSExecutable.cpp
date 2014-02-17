@@ -186,8 +186,8 @@ void RSExecutable::dumpDisassembly(OutputFile &pOutput) const {
                       reinterpret_cast<const uint8_t *>(func), func_size);
 
       if (result != kDisassembleSuccess) {
-          ALOGW("Failed to disassemble the function %s in %s (error code=%zu)!",
-                func_name, mObjFile->getName().c_str(), static_cast<size_t>(result));
+          ALOGW("Failed to disassemble the function %s in %s (error code=%lu)!",
+                func_name, mObjFile->getName().c_str(), (unsigned long) static_cast<size_t>(result));
 
         if (result != kDisassembleInvalidInstruction) {
             ALOGW("And the error occured in disassembler is fatal. Abort "

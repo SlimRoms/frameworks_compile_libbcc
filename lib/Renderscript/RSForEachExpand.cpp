@@ -315,8 +315,8 @@ public:
     }
 
     if (ArgVec.size() != 5) {
-      ALOGE("Incorrect number of arguments to function: %zu",
-            ArgVec.size());
+      ALOGE("Incorrect number of arguments to function: %lu",
+            (unsigned long) ArgVec.size());
       return false;
     }
     llvm::Value *Arg_p = ArgVec[0];
@@ -453,8 +453,8 @@ public:
     }
 
     if (ArgVec.size() != 5) {
-      ALOGE("Incorrect number of arguments to function: %zu",
-            ArgVec.size());
+      ALOGE("Incorrect number of arguments to function: %lu",
+            (unsigned long) ArgVec.size());
       return false;
     }
     llvm::Value *Arg_p = ArgVec[0];

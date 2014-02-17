@@ -71,8 +71,8 @@ RSCompilerDriver::loadScript(const char *pCacheDir, const char *pResName,
   }
 
   if ((pBitcode == NULL) || (pBitcodeSize <= 0)) {
-    ALOGE("No bitcode supplied! (bitcode: %p, size of bitcode: %zu)",
-          pBitcode, pBitcodeSize);
+    ALOGE("No bitcode supplied! (bitcode: %p, size of bitcode: %lu)",
+          pBitcode, (unsigned long) pBitcodeSize);
     return NULL;
   }
 
